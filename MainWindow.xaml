@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BackupHelper"
         mc:Ignorable="d"
-        Title="Backup Helper" Height="350" Width="525"
+        Title="Backup Helper" Height="500" Width="600"
         Loaded="Window_Loaded"
         Closing="Window_Closing">
     <Grid Name="TopLevelGrid">
@@ -15,8 +15,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".5*"/>
         </Grid.RowDefinitions>
 
         <Menu>
@@ -48,8 +49,13 @@
             <TextBox AcceptsReturn="False" Text="{Binding SpreadsheetsPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center"/>
         </DockPanel>
 
-        <TextBox Grid.Row="5" AcceptsReturn="True" IsReadOnly="True" Text="{Binding OutputText}"/>
+        <DockPanel Grid.Row="5" LastChildFill="True">
+            <Label Content="Tag:"/>
+            <TextBox AcceptsReturn="False" Text="{Binding BackupTag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center"/>
+        </DockPanel>
 
-        <Button Grid.Row="6" Content="Backup Now" Click="Backup_Click"/>
+        <TextBox Grid.Row="6" Name="OutputTextbox" AcceptsReturn="True" IsReadOnly="True" Text="{Binding OutputText}" Background="{Binding OutputBgColor}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+
+        <Button Grid.Row="7" Content="Backup Now" Click="Backup_Click"/>
     </Grid>
 </Window>

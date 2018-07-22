@@ -70,5 +70,17 @@ namespace BackupHelper.Properties {
                 this["EventName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BackupTag {
+            get {
+                return ((string)(this["BackupTag"]));
+            }
+            set {
+                this["BackupTag"] = value;
+            }
+        }
     }
 }
