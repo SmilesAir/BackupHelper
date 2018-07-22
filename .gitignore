@@ -1,0 +1,32 @@
+#Ignore thumbnails created by Windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.obj
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+obj/
+bin/Pool Creator.zip
+Export/names.xml
+Export/save.xml
+Export/Coop-Finals-A.xlsm
+Export/Open-Finals-A.xlsm
+Export/Women-Finals-A.xlsm
+Womens teams.xlsx
+Export/Women-Finals-A.xlsm
+Export/Coop-Finals-A.xlsm
+Export/Mixed-Finals-A.xlsm
+Export/Open-Finals-A.xlsm
