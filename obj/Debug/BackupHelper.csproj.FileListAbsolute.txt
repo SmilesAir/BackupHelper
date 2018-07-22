@@ -1,0 +1,17 @@
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\bin\Debug\BackupHelper.exe.config
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\bin\Debug\BackupHelper.exe
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\bin\Debug\BackupHelper.pdb
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\MainWindow.g.cs
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\App.g.cs
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper_MarkupCompile.cache
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper_MarkupCompile.lref
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\MainWindow.baml
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper.g.resources
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper.Properties.Resources.resources
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper.csproj.GenerateResource.Cache
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper.exe
+C:\Users\Ryan\Desktop\BackupHelper\BackupHelper\obj\Debug\BackupHelper.pdb
+C:\Users\Ryan\Desktop\BackupHelper\bin\Debug\BackupHelper.exe.config
+C:\Users\Ryan\Desktop\BackupHelper\obj\Debug\BackupHelper.exe
+C:\Users\Ryan\Desktop\BackupHelper\obj\Debug\BackupHelper.pdb
