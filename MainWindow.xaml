@@ -16,6 +16,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height=".5*"/>
         </Grid.RowDefinitions>
@@ -50,12 +51,18 @@
         </DockPanel>
 
         <DockPanel Grid.Row="5" LastChildFill="True">
+            <Label Content="Pool Creator Path:"/>
+            <Button Content="Browse..." Click="BrowsePoolCreatorPath_Click"/>
+            <TextBox AcceptsReturn="False" Text="{Binding PoolCreatorPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center"/>
+        </DockPanel>
+
+        <DockPanel Grid.Row="6" LastChildFill="True">
             <Label Content="Tag:"/>
             <TextBox AcceptsReturn="False" Text="{Binding BackupTag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center"/>
         </DockPanel>
 
-        <TextBox Grid.Row="6" Name="OutputTextbox" AcceptsReturn="True" IsReadOnly="True" Text="{Binding OutputText}" Background="{Binding OutputBgColor}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
+        <TextBox Grid.Row="7" Name="OutputTextbox" AcceptsReturn="True" IsReadOnly="True" Text="{Binding OutputText}" Background="{Binding OutputBgColor}" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"/>
 
-        <Button Grid.Row="7" Content="Backup Now" Click="Backup_Click"/>
+        <Button Grid.Row="8" Content="Backup Now" Click="Backup_Click"/>
     </Grid>
 </Window>

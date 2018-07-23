@@ -82,5 +82,17 @@ namespace BackupHelper.Properties {
                 this["BackupTag"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PoolCreatorPath {
+            get {
+                return ((string)(this["PoolCreatorPath"]));
+            }
+            set {
+                this["PoolCreatorPath"] = value;
+            }
+        }
     }
 }

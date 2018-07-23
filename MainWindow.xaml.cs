@@ -72,6 +72,16 @@ namespace BackupHelper
 				OnPropertyChanged("SpreadsheetsPath");
 			}
 		}
+		string poolCreatorPath = "";
+		public string PoolCreatorPath
+		{
+			get { return poolCreatorPath; }
+			set
+			{
+				poolCreatorPath = value;
+				OnPropertyChanged("PoolCreatorPath");
+			}
+		}
 		string backupTag = "";
 		public string BackupTag
 		{
@@ -118,6 +128,7 @@ namespace BackupHelper
 			FPAHelperPath = Properties.Settings.Default.FPAHelperPath;
 			SpreadsheetsPath = Properties.Settings.Default.SpreadsheetsPath;
 			BackupTag = Properties.Settings.Default.BackupTag;
+			PoolCreatorPath = Properties.Settings.Default.PoolCreatorPath;
 		}
 
 		private void Window_Closing(object sender, CancelEventArgs e)
@@ -127,6 +138,7 @@ namespace BackupHelper
 			Properties.Settings.Default.FPAHelperPath = FPAHelperPath;
 			Properties.Settings.Default.SpreadsheetsPath = SpreadsheetsPath;
 			Properties.Settings.Default.BackupTag = BackupTag;
+			Properties.Settings.Default.PoolCreatorPath = PoolCreatorPath;
 
 			Properties.Settings.Default.Save();
 		}
@@ -193,6 +205,25 @@ namespace BackupHelper
 			}
 		}
 
+		private void BrowsePoolCreatorPath_Click(object sender, RoutedEventArgs e)
+		{
+			using (var dialog = new System.Windows.Forms.FolderBrowserDialog())
+			{
+				if (PoolCreatorPath.Length == 0)
+				{
+					dialog.RootFolder = Environment.SpecialFolder.Desktop;
+				}
+				else
+				{
+					dialog.SelectedPath = PoolCreatorPath;
+				}
+				if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+				{
+					PoolCreatorPath = dialog.SelectedPath;
+				}
+			}
+		}
+
 		private void Backup_Click(object sender, RoutedEventArgs e)
 		{
 			OutputText = "";
@@ -228,6 +259,8 @@ namespace BackupHelper
 
 			bError |= !BackupFile(newBackupPath, FPAHelperPath, "names.xml");
 			bError |= !BackupFile(newBackupPath, FPAHelperPath, "save.xml");
+			bError |= !BackupFile(newBackupPath, PoolCreatorPath, "PlayerRankings.xml");
+			bError |= !BackupFile(newBackupPath, PoolCreatorPath, "TounamentData.xml");
 			bError |= !BackupFolder(System.IO.Path.Combine(newBackupPath, "Spreadsheets"), SpreadsheetsPath);
 
 			if (!bError)
